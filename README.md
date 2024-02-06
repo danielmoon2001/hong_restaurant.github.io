@@ -4,7 +4,6 @@ Class was offered in 2020-Fall.
 
 In collaboration with 최지민(서어서문학과 19학번). 
 
-
 Used data crawling on NaverMaps and Semantic UI for webpage design. 
 
-My first webpage! 
+Link: https://danielmoon2001.github.io/2020_Fall__Basic_Computing/hongrestaurant.html 
