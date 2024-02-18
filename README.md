@@ -6,4 +6,4 @@ In collaboration with 최지민(서어서문학과 19학번).
 
 Used data crawling on NaverMaps and Semantic UI for webpage design. 
 
-Site link: https://danielmoon2001.github.io/2020_Fall__Basic_Computing/hongrestaurant.html 
+Site link: https://danielmoon2001.github.io/Basic_Computing__2020_Fall/hongrestaurant.html 
