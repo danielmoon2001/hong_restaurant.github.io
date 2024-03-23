@@ -2,8 +2,9 @@
     <head>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <title>GH_team_project</title>
-      <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
-      <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+        <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <style>
             .collapse {
                 visibility: collapse;
@@ -26,10 +27,12 @@
     </head>
     <body>
     <!-- Hero image of wine vineyards -->
-    <div class="ui container" style="margin-top: -10px;">
+    <div class="ui container" style="margin-top: -10px;" data-aos="fade-down">
         <img src="https://blog.goway.com/globetrotting/wp-content/uploads/2018/03/White-wine-with-barrel-on-vineyard-in-Chianti-Tuscany-Italy-_154393475.jpg" alt="Wine Vineyards" class="vineyard-hero-image">
     </div>        
-    <div class = "ui container">
+    <br>
+    <br>
+    <div class="ui container" data-aos="fade-up">
          <div class="ui grid">
             <div class="column four wide">
                <button class="ui blue button fluid"></button>
@@ -684,5 +687,14 @@
          <br>
          <br>
       </div>
+    <!-- Initialization of AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Custom settings for animation
+            duration: 1200, // values from 0 to 3000, with step 50ms
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+    </script>
    </body>
 </html>
