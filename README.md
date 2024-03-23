@@ -9,4 +9,6 @@ Used data crawling on NaverMaps and Semantic UI for webpage design.
 Site link: https://danielmoon2001.github.io/Basic_Computing__2020_Fall/hongrestaurant.html 
 
 
-추가 GH 링크: https://danielmoon2001.github.io/Basic_Computing__2020_Fall/GH_edu_project.html
+추가 GH 링크: 
+https://danielmoon2001.github.io/Basic_Computing__2020_Fall/GH_edu_project.html
+https://danielmoon2001.github.io/Basic_Computing__2020_Fall/submit_button_link.html
