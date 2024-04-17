@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Recommendation Form</title>
+    <!-- Add Semantic UI CSS here if needed -->
+</head>
+<body>
+    <h1>Flower Recommendation Form</h1>
+    
+    <form id="flowerForm">
+        <label for="flowerType">Choose your favorite flower:</label>
+        <select name="flowerType" id="flowerType">
+            <option value="roses">Roses</option>
+            <option value="tulips">Tulips</option>
+            <option value="lilies">Lilies</option>
+            <option value="daisies">Daisies</option>
+            <option value="orchids">Orchids</option>
+        </select>
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    <div id="recommendation" style="display:none;">
+        <!-- The recommendation message will appear here -->
+    </div>
+
+    <script>
+        document.getElementById('flowerForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            
+            var userChoice = document.getElementById('flowerType').value;
+            var recommendationText = '';
+            
+            switch (userChoice) {
+                case 'roses':
+                    recommendationText = 'Roses are classic. Consider pairing them with some lilies for a beautiful bouquet.';
+                    break;
+                case 'tulips':
+                    recommendationText = 'Tulips are a great choice for a springtime arrangement.';
+                    break;
+                case 'lilies':
+                    recommendationText = 'Lilies have a wonderful fragrance. They’re perfect for any occasion.';
+                    break;
+                case 'daisies':
+                    recommendationText = 'Daisies bring a cheerful vibe. Why not mix them with some colorful wildflowers?';
+                    break;
+                case 'orchids':
+                    recommendationText = 'Orchids are exotic and elegant. They make a statement on their own.';
+                    break;
+                default:
+                    recommendationText = 'Not sure what to pick? Our mixed flower arrangements are always a hit!';
+            }
+            
+            document.getElementById('recommendation').innerHTML = recommendationText;
+            document.getElementById('recommendation').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
