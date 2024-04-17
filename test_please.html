@@ -3,58 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Recommendation Form</title>
-    <!-- Add Semantic UI CSS here if needed -->
+    <title>Flower Recommendation</title>
+    <!-- Add Semantic UI CSS CDN link here -->
 </head>
 <body>
-    <h1>Flower Recommendation Form</h1>
+    <h1>Find Your Perfect Flower Arrangement</h1>
     
-    <form id="flowerForm">
-        <label for="flowerType">Choose your favorite flower:</label>
-        <select name="flowerType" id="flowerType">
-            <option value="roses">Roses</option>
-            <option value="tulips">Tulips</option>
-            <option value="lilies">Lilies</option>
-            <option value="daisies">Daisies</option>
-            <option value="orchids">Orchids</option>
-        </select>
+    <form id="preferenceForm">
+        <div>
+            <label for="color">What color do you like?</label>
+            <select name="color" id="color">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <!-- Add more color options here -->
+            </select>
+        </div>
+        <div>
+            <label for="occasion">What is the occasion?</label>
+            <select name="occasion" id="occasion">
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="sympathy">Sympathy</option>
+                <!-- Add more occasion options here -->
+            </select>
+        </div>
+        <div>
+            <label for="mood">What is your mood?</label>
+            <select name="mood" id="mood">
+                <option value="happy">Happy</option>
+                <option value="romantic">Romantic</option>
+                <option value="sad">Sad</option>
+                <!-- Add more mood options here -->
+            </select>
+        </div>
         <button type="submit">Get Recommendation</button>
     </form>
 
-    <div id="recommendation" style="display:none;">
-        <!-- The recommendation message will appear here -->
+    <div id="recommendationResult" style="display:none;">
+        <!-- The recommendation result will appear here -->
     </div>
 
     <script>
-        document.getElementById('flowerForm').onsubmit = function(event) {
+        document.getElementById('preferenceForm').onsubmit = function(event) {
             event.preventDefault(); // Prevent form from submitting the traditional way
             
-            var userChoice = document.getElementById('flowerType').value;
-            var recommendationText = '';
+            // Get the values from the form
+            var color = document.getElementById('color').value;
+            var occasion = document.getElementById('occasion').value;
+            var mood = document.getElementById('mood').value;
             
-            switch (userChoice) {
-                case 'roses':
-                    recommendationText = 'Roses are classic. Consider pairing them with some lilies for a beautiful bouquet.';
-                    break;
-                case 'tulips':
-                    recommendationText = 'Tulips are a great choice for a springtime arrangement.';
-                    break;
-                case 'lilies':
-                    recommendationText = 'Lilies have a wonderful fragrance. They’re perfect for any occasion.';
-                    break;
-                case 'daisies':
-                    recommendationText = 'Daisies bring a cheerful vibe. Why not mix them with some colorful wildflowers?';
-                    break;
-                case 'orchids':
-                    recommendationText = 'Orchids are exotic and elegant. They make a statement on their own.';
-                    break;
-                default:
-                    recommendationText = 'Not sure what to pick? Our mixed flower arrangements are always a hit!';
-            }
+            // Define your hardcoded logic for recommendations
+            var recommendation = getRecommendation(color, occasion, mood);
             
-            document.getElementById('recommendation').innerHTML = recommendationText;
-            document.getElementById('recommendation').style.display = 'block';
+            // Display the recommendation result
+            document.getElementById('recommendationResult').innerHTML = recommendation;
+            document.getElementById('recommendationResult').style.display = 'block';
         };
+
+        function getRecommendation(color, occasion, mood) {
+            // Here you define the logic to select the recommendation based on the inputs
+            // This is a simple version based on concatenating the values, 
+            // but you can make this as complex as you need it to be.
+            var recommendationText = 'Based on your preferences: <br>' +
+                                     'Color: ' + color + '<br>' +
+                                     'Occasion: ' + occasion + '<br>' +
+                                     'Mood: ' + mood + '<br>' +
+                                     'We recommend the following arrangement:';
+            
+            // Example logic to select a recommendation
+            if(color === 'red' && occasion === 'anniversary' && mood === 'romantic') {
+                recommendationText += '<br><br> Rose Delight - A bouquet of red roses to celebrate love.';
+            }
+            // Add more conditions for different combinations
+            // ...
+            
+            return recommendationText;
+        }
     </script>
 </body>
 </html>
+
