@@ -11,4 +11,5 @@ Site link: https://danielmoon2001.github.io/Basic_Computing__2020_Fall/hongresta
 
 추가 GH 링크: 
 https://danielmoon2001.github.io/Basic_Computing__2020_Fall/GH_edu_project.html
+
 https://danielmoon2001.github.io/Basic_Computing__2020_Fall/submit_button_link.html
